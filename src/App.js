@@ -1,10 +1,14 @@
 // import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Router1 from "./routes/Router1";
+import Provider from "./context/Provider";
 
 function App() {
   return (
     <>
-    <h1>PROYECTO CHORD APP</h1>
+      <Provider>
+        <Router1 />
+      </Provider>
     </>
   );
 }
