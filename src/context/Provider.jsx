@@ -29,7 +29,7 @@ function Provider({ children }) {
         const action_logout = {
             type: types.logout
         }
-        localStorage.setItem("estado", true)
+        localStorage.removeItem("estado")
         dispach(action_logout)
     }
     return (

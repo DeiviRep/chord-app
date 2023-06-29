@@ -4,7 +4,7 @@ import { Navigate } from 'react-router-dom'
 
 function RutasPrivadas({ children }) {
     const { estado } = useContext(Contexto)
-    return (estado) ? children : <Navigate to='/login' />
+    return (estado) ? children : <Navigate to='/' />
 }
 
 export default RutasPrivadas

@@ -1,6 +1,16 @@
 import React, { useContext } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
 import Contexto from '../context/Contexto';
+import styles from './NavApp.module.css'
+import styled from 'styled-components';
+// Define los estilos utilizando CSS-in-JS
+export const Button = styled.button`
+  background-color: ${(props) => (props.primary ? "blue" : "gray")};
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+`;
 
 function NavApp() {
     const navegacion = useNavigate();
@@ -11,7 +21,7 @@ function NavApp() {
     }
     return (
         <>
-            <header>
+            <header className={styles.header}>
                 <nav>
                     <NavLink to='biblioteca'>
                         Biblioteca
@@ -22,7 +32,7 @@ function NavApp() {
                     <NavLink to='inicio'>
                         Inicio
                     </NavLink>
-                    <button onClick={login}>Logout</button>
+                    <Button primary onClick={login}>Logout</Button>
                 </nav>
             </header>
         </>
